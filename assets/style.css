@@ -1,0 +1,51 @@
+/* Remove annoying defaults */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Everything goes in here */
+.page-container {
+    width: 1280px;
+    height: 720px;
+}
+
+/* Progress Bars */
+.bar-container {
+    position: absolute;
+    width: 227px;
+    height: 20px;
+    top: 81px;
+    left: 123px;
+    font-family: "FatFrank";
+    color: white;
+    font-size: 0.85em;
+    text-align: center;
+}
+
+.bar {
+    border-radius: 0px 0px 10px 0px;
+    width: 100%;    
+    margin-top: -19px;
+}
+
+.bar-progress {
+    height: 20px;
+    border-radius: 0px 0px 10px 0px;
+}
+
+#follow-bar {
+    background-color: #4c2271;
+}
+
+#follow-progress {
+    background-color: #853dc4;
+}
+
+#subscribe-bar {
+    background-color: #800c4f;
+}
+
+#subscribe-progress {
+    background-color: #df158a;
+}
