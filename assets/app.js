@@ -4,6 +4,11 @@ updateChannelData();
 var currentGoal = "#viewer-goal";
 var currentZIndex = -10;
 
+// TEMPORARY DUMMY DATA
+var hamstarData = [];
+hamstarData.followerGoal = 5000;
+hamstarData.subscriberGoal = 100;
+
 // Every 10 seconds, update everything
 window.setInterval(function(){
     updateChannelData();
@@ -21,6 +26,8 @@ function updateChannelData() {
         type: "GET",
         dataType: "JSON",
         success: function(data){
+            
+            /* Save counts to channelData */
             channelData.followerCount = data.numFollowers;
             console.log(channelData.followerCount);
             channelData.subscriberCount = 62;
@@ -28,10 +35,19 @@ function updateChannelData() {
             channelData.currentViewerCount = data.viewersCurrent;
             // channelData.subscriberCount = data.numSubscribers;
 
+            /* Update visual counts */
             $("#follow-progress").html(channelData.followerCount);
             $("#subscribe-progress").html(channelData.subscriberCount);
             $("#view-current").html(channelData.currentViewerCount);
             $("#view-total").html(channelData.totalViewerCount);
+            
+            /* OH GOD NO MATHS TIME */
+            /* AKA update progress bar */
+            followerPercentage = (channelData.followerCount / hamstarData.followerGoal) * 100 + "%"
+            $('#follower-progress').width(followerPercentage);
+            
+            subscriberPercentage = (channelData.subscriberCount / hamstarData.subscriberGoal) * 100 + "%"
+            $('#subscriber-progress').width(subscriberPercentage);
 
         }
     });
