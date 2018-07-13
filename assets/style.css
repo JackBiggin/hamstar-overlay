@@ -4,6 +4,11 @@
     padding: 0;
 }
 
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;  
+}
+
 /* Everything goes in here */
 .page-container {
     width: 1280px;
@@ -15,6 +20,7 @@
     position: absolute;
     z-index: 100;
 }
+
 /* Progress Bars */
 .bar-container {
     position: absolute;
@@ -61,4 +67,76 @@
 
 #view-progress {
     background-color: #1fbaed;
+}
+
+
+
+/* Giveaway System */
+.giveaway-container {
+    position: absolute;
+    width: 300px;
+    left: 980px;
+    height: 100%;
+    background-color: #491169;
+}
+
+.giveaway-header {
+    background-color: #300050;
+    font-family: "FatFrank";
+    color: white;
+    text-align: center;
+    font-size: 3em;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.giveaway-header-subtitle {
+    font-size: 0.5em;
+}
+
+.giveaway-footer {
+    background-color: #300050;
+    color: white;
+    font-family: "FatFrank";
+    font-size: 0.7em;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: absolute;
+    width: 100%;
+    top: 695px;
+}
+
+
+.giveaway-userbox {
+    background-color: #ffd200;
+    color: white;
+    font-family: "FatFrank";
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    padding: 6px;
+    font-size: 20px;
+    border-bottom: 4px solid #CC9F00;
+    margin-bottom: 4px;
+}
+
+.giveaway-userbox img {
+    width: 30px;
+    height: auto;
+}
+
+.giveaway-userbox .giveaway-username {
+    margin-left: 34px;
+    margin-top: -32px;
+    padding-left: 4px;
+    padding-right: 4px;
+    overflow: hidden;
+}
+
+.giveaway-entries {
+    height: 398px;
+    overflow: hidden;
+}
+
+#giveaway-countdown {
+    font-size: 3em;
 }

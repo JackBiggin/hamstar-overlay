@@ -17,7 +17,11 @@ window.setInterval(function(){
 // Every 20 seconds, change view
 window.setInterval(function(){
      switchGoal(currentGoal)
-}, 5000);
+}, 20000);
+
+window.setInterval(function(){
+    $("#entries").scrollTop = $("#entries").scrollHeight;
+}, 500);
 
 /* Functions go here */
 function updateChannelData() {
