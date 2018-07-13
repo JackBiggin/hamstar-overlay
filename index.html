@@ -6,17 +6,24 @@
     <div class="page-container">
         
         <img class="bug" src="./assets/img/bug.png">
-        <div class="bar-container" id="follower-goal">
-            Follower Goal: <span id="follow-progress">0</span>/<span id="follow-goal">5000</span>
+        <div class="bar-container" id="follower-goal" style="z-index:-3;">
+            FOLLOWER GOAL: <span id="follow-progress">0</span>/<span id="follow-goal">5000</span>
             <div class="bar" id="follow-bar">
                 <div class="bar-progress" id="follow-progress"></div>
             </div>
         </div>
         
-        <div class="bar-container" id="subscriber-goal">
-            Subscriber Goal: <span id="subscribe-progress">0</span>/<span id="subscribe-goal">100</span>
+        <div class="bar-container" id="subscriber-goal" style="z-index:-2;">
+            SUBSCRIBER GOAL: <span id="subscribe-progress">0</span>/<span id="subscribe-goal">100</span>
             <div class="bar" id="subscribe-bar">
                 <div class="bar-progress" id="subscribe-progress"></div>
+            </div>
+        </div>
+        
+        <div class="bar-container" id="viewer-goal" style="z-index:-1;">
+            <span id="view-current">0</span> VIEWERS / <span id="view-total">0</span> TOTAL
+            <div class="bar" id="view-bar">
+                <div class="bar-progress" id="view-progress"></div>
             </div>
         </div>
         
