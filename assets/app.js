@@ -30,6 +30,8 @@ function updateChannelData() {
 
             $("#follow-progress").html(channelData.followerCount);
             $("#subscribe-progress").html(channelData.subscriberCount);
+            $("#view-current").html(channelData.currentViewerCount);
+            $("#view-total").html(channelData.totalViewerCount);
 
         }
     });
