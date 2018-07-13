@@ -10,6 +10,11 @@
     height: 720px;
 }
 
+/* The wonderful hamster graphic in the corner */
+.bug {
+    position: absolute;
+    z-index: 100;
+}
 /* Progress Bars */
 .bar-container {
     position: absolute;
