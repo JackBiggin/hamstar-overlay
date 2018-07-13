@@ -1,7 +1,7 @@
 // Setup channelData/currentGoal and load in initial data
 var channelData = [];
 updateChannelData();
-var currentGoal = "viewer-goal";
+var currentGoal = "#viewer-goal";
 var currentZIndex = -10;
 
 // Every 10 seconds, update everything
@@ -39,34 +39,26 @@ function updateChannelData() {
 
 function switchGoal(goal) {
 // It goes Viewer -> Subscriber -> Follower
-    switch(goal) {
-        case "viewer-goal":
-            currentGoal = "subscriber-goal";
-            $("#viewer-goal").fadeTo("slow", 0, function() {
-                $("#viewer-goal").css('z-index', currentZIndex);
-                $("#viewer-goal").css('opacity', 100);
-                currentZIndex += -10
-            });
+    
+    $(currentGoal).fadeTo("slow", 0, function() {
+        $(currentGoal).css('z-index', currentZIndex);
+        $(currentGoal).css('opacity', 100);
+        
+        switch(goal) {
+        case "#viewer-goal":
+            currentGoal = "#subscriber-goal"; 
             break;
-            
-        case "subscriber-goal":
-            currentGoal = "follower-goal";
-            $("#subscriber-goal").fadeTo("slow", 0, function() {
-                $("#subscriber-goal").css('z-index', currentZIndex);
-                $("#subscriber-goal").css('opacity', 100);
-                currentZIndex += -10
-            });
+        
+        case "#subscriber-goal":
+            currentGoal = "#follower-goal";
             break;
-            
-        case "follower-goal":
-            currentGoal = "viewer-goal";
-            $("#follower-goal").fadeTo("slow", 0, function() {
-                $("#follower-goal").css('z-index', currentZIndex);
-                $("#follower-goal").css('opacity', 100);
-                currentZIndex += -10
-            });
+        
+        case "#follower-goal":
+            currentGoal = "#viewer-goal";
             break;
     }
+        currentZIndex += -10
+    });
 }
 
 
