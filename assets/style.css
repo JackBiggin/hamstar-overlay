@@ -69,7 +69,13 @@
     background-color: #1fbaed;
 }
 
+#sparkswasted-bar {
+    background-color: #B32600;
+}
 
+#sparkswasted-progress {
+    background-color: #ff7200;
+}
 
 /* Giveaway System */
 .giveaway-container {

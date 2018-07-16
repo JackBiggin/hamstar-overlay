@@ -34,7 +34,7 @@ function updateChannelData() {
             /* Save counts to channelData */
             channelData.followerCount = data.numFollowers;
             console.log(channelData.followerCount);
-            channelData.subscriberCount = 62;
+            channelData.subscriberCount = 63;
             channelData.totalViewerCount = data.viewersTotal;
             channelData.currentViewerCount = data.viewersCurrent;
             // channelData.subscriberCount = data.numSubscribers;
