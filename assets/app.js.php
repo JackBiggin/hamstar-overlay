@@ -1,3 +1,5 @@
+<?php $config = require("../config.php"); ?>
+
 // Setup channelData/currentGoal and load in initial data
 var channelData = [];
 updateChannelData();
@@ -27,14 +29,14 @@ window.setInterval(function(){
 function updateChannelData() {
     var mixerDataRequest = $.ajax({
         url: "https://mixer.com/api/v1/channels/70218/details",
+		headers: {"Authorization": "Bearer <?php echo $config['token']; ?>"},
         type: "GET",
         dataType: "JSON",
         success: function(data){
             
             /* Save counts to channelData */
             channelData.followerCount = data.numFollowers;
-            console.log(channelData.followerCount);
-            channelData.subscriberCount = 63;
+            channelData.subscriberCount = data.numSubscribers;
             channelData.totalViewerCount = data.viewersTotal;
             channelData.currentViewerCount = data.viewersCurrent;
             // channelData.subscriberCount = data.numSubscribers;
