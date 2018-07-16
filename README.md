@@ -8,7 +8,7 @@ You're welcome to use and adapt all the code in this repo for yourself (although
 2. Copy config.example.php to config.php, and follow the instructions inside it.
 3. Add the overlay as a webpage source into OBS/XSplit
 4. ???
-5? Profit?
+5. Profit?
 
 
 ## Todos
